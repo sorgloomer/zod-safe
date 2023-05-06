@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./lib",
+    "module": "commonjs",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "target": "es5",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@src": [
+        "./src"
+      ],
+      "@src/*": [
+        "./src/*"
+      ],
+      "@test/*": [
+        "./test/*"
+      ],
+      "@package/*": [
+        "./*"
+      ]
+    },
+    "experimentalDecorators": true
+  },
+  "moduleResolution": "node"
+}

@@ -1,0 +1,4 @@
+.npmrc
+.idea/
+lib/
+node_modules/
