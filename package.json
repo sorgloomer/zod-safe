@@ -37,5 +37,12 @@
   "gitHead": "f57c1560790ad8c6534bb7850ad396b051642b41",
   "dependencies": {
     "tslib": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=14.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sorgloomer/zod-safe"
   }
 }
