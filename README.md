@@ -10,7 +10,7 @@
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://www.npmjs.com/package/zod-safe">npm</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/sorgloomer/zod-safe/issues/new">Issues</a>
+  <a href="https://github.com/sorgloomer/zod-safe/issues">Issues</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://twitter.com/hege_hegedus">@hege_hegedus</a>
   <br />
