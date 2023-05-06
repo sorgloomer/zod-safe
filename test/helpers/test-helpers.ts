@@ -1,5 +1,5 @@
 import { expect } from '@jest/globals';
-import * as projectTsConfig from '@package/tsconfig.json';
+import * as projectTsConfig from 'tsconfig.json';
 import * as ts from 'typescript';
 
 import { lazy, Producer } from './lazy';

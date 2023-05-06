@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ["14", "20"]
-        typescript: ["5.0", "4.9"]
+        node: ["20", "14"]
+        typescript: ["5.0", "4.3"]
     name: TS ${{ matrix.typescript }} Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@v2
@@ -23,6 +23,6 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm install
       - run: npm run compile
-      - run: npm install typescript@${{ matrix.typescript }}
+      - run: npm install --no-save typescript@${{ matrix.typescript }}
       - run: npm run typecheck
       - run: npm run test

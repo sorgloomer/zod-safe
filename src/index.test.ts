@@ -1,12 +1,16 @@
 import { describe, expect, it } from "@jest/globals";
-import { lazyCompileTsFile } from "@test/helpers/test-helpers";
+import * as typescript from "typescript";
+import * as versions from "compare-versions";
+import { lazyCompileTsFile } from "test/helpers/test-helpers";
+
+const itIf = (condition: boolean) => condition ? it : it.skip;
 
 describe("ZodSafe", () => {
 
   // language=typescript
   const setup = `
     import * as z from 'zod';
-    import { Exactly, ZodSafe } from "@src/index";
+    import { Exactly, ZodSafe } from "src/index";
     enum TransferType {
       deposit = "deposit",
       withdraw = "withdraw",
@@ -35,11 +39,13 @@ describe("ZodSafe", () => {
     expect(errors).toHaveLength(0);
   });
 
-  it("is more expressive than the 'satisfies' operator", () => {
+  itIf(
+    versions.satisfies(typescript.version, ">=4.9")
+  )("is more expressive than the 'satisfies' operator", () => {
     // language=typescript
     const setup = `
       import * as z from 'zod';
-      import { Exactly, ZodSafe } from "@src/index";
+      import { Exactly, ZodSafe } from "src/index";
       interface Contact {
         name: string;
       }
@@ -69,7 +75,7 @@ describe("ZodSafe", () => {
     // language=typescript
     const errors = lazyCompileTsFile(`
       import * as z from 'zod';
-      import { Exactly, ZodSafe } from "@src/index";
+      import { Exactly, ZodSafe } from "src/index";
 
       ZodSafe(z.literal("FOO")).input<Exactly<"FOO">>();
     `)();
@@ -79,7 +85,7 @@ describe("ZodSafe", () => {
     // language=typescript
     const errors = lazyCompileTsFile(`
       import * as z from 'zod';
-      import { Exactly, ZodSafe } from "@src/index";
+      import { Exactly, ZodSafe } from "src/index";
 
       ZodSafe(z.string()).input<Exactly<string>>();
     `)();
@@ -90,7 +96,7 @@ describe("ZodSafe", () => {
     // language=typescript
     const errors = lazyCompileTsFile(`
       import * as z from 'zod';
-      import { Exactly, ZodSafe } from "@src/index";
+      import { Exactly, ZodSafe } from "src/index";
 
       ZodSafe(z.string()).input<Exactly<"FOO">>();
     `)();
@@ -102,7 +108,7 @@ describe("ZodSafe", () => {
     // language=typescript
     const errors = lazyCompileTsFile(`
       import * as z from 'zod';
-      import { Exactly, ZodSafe } from "@src/index";
+      import { Exactly, ZodSafe } from "src/index";
 
       ZodSafe(z.literal("FOO")).input<Exactly<string>>();
     `)();
@@ -110,4 +116,3 @@ describe("ZodSafe", () => {
     expect(errors[0]).toContain(`Type 'string' is not assignable to type '"FOO"'.`);
   });
 });
-

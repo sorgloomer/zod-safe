@@ -13,20 +13,7 @@
     "types": [
       "node"
     ],
-    "paths": {
-      "@src": [
-        "./src"
-      ],
-      "@src/*": [
-        "./src/*"
-      ],
-      "@test/*": [
-        "./test/*"
-      ],
-      "@package/*": [
-        "./*"
-      ]
-    },
+    "baseUrl": ".",
     "experimentalDecorators": true
   },
   "moduleResolution": "node"
