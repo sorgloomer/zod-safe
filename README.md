@@ -1,16 +1,16 @@
 # zod-safe
 
 <p>
-  <a href="https://github.com/sorgloomer/ts-typesafe-decorators/actions?query=branch%3Amaster"><img src="https://github.com/sorgloomer/ts-typesafe-decorators/actions/workflows/test.yml/badge.svg?event=push&branch=master" alt="Test" /></a>
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/sorgloomer/ts-typesafe-decorators" alt="License"></a>
+  <a href="https://github.com/sorgloomer/zod-safe/actions?query=branch%3Amaster"><img src="https://github.com/sorgloomer/zod-safe/actions/workflows/test.yml/badge.svg?event=push&branch=master" alt="Test" /></a>
+  <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/sorgloomer/zod-safe" alt="License"></a>
 </p>
 
 <div>
-  <a href="https://github.com/sorgloomer/ts-typesafe-decorators/tree/master/packages/zod-safe">GitHub</a>
+  <a href="https://github.com/sorgloomer/zod-safe">GitHub</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://www.npmjs.com/package/zod-safe">npm</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/sorgloomer/ts-typesafe-decorators/issues/new">Issues</a>
+  <a href="https://github.com/sorgloomer/zod-safe/issues/new">Issues</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://twitter.com/hege_hegedus">@hege_hegedus</a>
   <br />
